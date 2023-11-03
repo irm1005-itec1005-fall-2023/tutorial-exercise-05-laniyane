@@ -25,12 +25,15 @@ body {
   color: #242121;
 
   /* Flex directives */
+
   /* 1. Set the display to flex */
 
   /* 2. Set the flex direction to column */
 
   /* 3. Set the justify content to space between */
-
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
 
 }
 
@@ -44,6 +47,8 @@ body {
 */
 header {
   padding: 2rem 1rem;
+  background-color: #71b9e6;
+  color: #edf2f4;
   /* 4. Set a cool background colour */
 
   /* 5. Set a cool text colour (or use #edf2f4) */
@@ -52,7 +57,7 @@ header {
 
 header h2 {
   /* 6. Set the text alignment to center */
-
+  text-align: center;
 
   margin: 0;
 }
@@ -72,10 +77,11 @@ header h2 {
   make it look a bit better
 */
 main {
+  align-self: center;
   /* 7. Set the align-self to center
         This is so our element does stretch to full width of the page
   */
-
+  max-width: 900px;
   min-width: 500px;
   padding: 5rem;
   margin: 2rem;
@@ -93,6 +99,8 @@ main {
 */
 footer {
   padding: 2rem 1rem;
+  background-color: #71b9e6;
+  color: #edf2f4 ;
   /* 8. Set a cool background colour (or use #1d3557) */
 
   /* 9. Set a cool text colour (or use #edf2f4) */

@@ -14,7 +14,8 @@
  *
  */
 body {
-  color: #242121;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9b3434;
 
   /* 1. Set the font family and colours */
 
@@ -22,9 +23,12 @@ body {
   /* Check out this cool background gradient */
   /* Replace the background with your own gradient styles */
   /* Source: https://uigradients.com/#Jonquil */
-  background: #ffeeee; /* fallback for old browsers */
-  background: linear-gradient(to right, #ddefbb, #ffeeee);
+  background: #fffefe; /* fallback for old browsers */
+  background: linear-gradient(to right, #a2e22c, #9cdaa8);
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   /* Set the flexbox directives */
   /* 2. Set the display to flex */
 
@@ -44,7 +48,9 @@ header {
 
   /* header is both a flexbox item and a flexbox container */
   /* 5. Set the display to flex */
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   /* 6. Set the justify content to space between */
 
   /* 7. Set the align items to center */
@@ -52,10 +58,16 @@ header {
 
 header .header--banner--logo {
   /* 8. Set the height of the image (I used 2.2rem but you can use whatevs) */
-
+ height: 2.9rem;
 }
 
 header .header--banner--nav ul {
+  display: flex;
+  gap: 3rem;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;   
+
   /* Another flexbox container */
   /* 9. Set the display to flex */
 
@@ -73,12 +85,19 @@ header nav.header--banner--nav ul li a {
   /* 14. Set the font size, colour, text decoration, and font weight
          to make your links look nice
    */
+   font-size: medium;
+   color: #0c0148;
+   text-decoration: none;
+    font-weight: 900;
 }
 
 header nav.header--banner--nav ul li a:hover {
+  color: #08a1ee;
+  text-decoration: wavy;
   /* 15. Set the hover colour to something nice */
 
   /* 16. Set the hover text decoration to underline */
+  
 
 }
 
@@ -108,7 +127,7 @@ main {
     and will try to take up the full width of the page
   */
   /* 17. Set the align self to center */
-
+ align-self: center;
 
   /* Set a minimum width for our "box" */
   min-width: 550px;
@@ -120,18 +139,19 @@ main h1 {
   /* 18. Make the h1 look good using margin, font size,
          letter spacing, font weight and text-align
   */
-
+  margin: 10px 0px 40px 0px;
 }
 
 .main--img {
   /* Margin 0 auto is a cool trick to center an element */
   margin: 0 auto;
-
+ height: 150px;
   /* 19. Set the height of the image */
 
 }
 
 .main--form {
+  display: flex;
   /* We use flex on the form so the input and submit are side by side */
   /* 20. Set the display to flex */
 
@@ -143,7 +163,7 @@ main h1 {
   padding: 1.5rem 2rem;
   background-color: rgb(255, 255, 255);
   border: none;
-
+  flex-grow: 1;
   /* 21. Set the flex grow to 1 */
 
 }
@@ -162,7 +182,7 @@ main h1 {
 /* This targets our input type=submit when we hover over it */
 .main--form input[type="submit"]:hover {
   cursor: pointer;
-  background-color: #30568b;
+  background-color: #01060e;
 }
 
 /*
@@ -176,19 +196,26 @@ main h1 {
 
  footer {
   color: #f1faee;
+  background-color: #47924e;
+  padding: 2rem 1.3rem;
 
   /* 22. Add a background-colour (I used ##1d3557) */
 
   /* 23. Add padding to the footer (I used 2rem 1.3rem) */
-  padding: 2rem 1.3rem;
+  
 
 }
 
 footer .footer--nav ul {
+  display: flex;
+  flex-direction: row ;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 2rem;
+
   list-style-type: none;
   margin: 0px;
   padding: 0px;
-
   /* Another flexbox container */
 
   /* 24. Set the display to flex */
@@ -208,7 +235,7 @@ footer .footer--nav ul li a {
   /* Fee free to change this as you see fit */
   font-size: 0.8rem;
   text-decoration: none;
-  font-weight: 900;
+  font-weight: 700;
   color: #f1faee;
 }
 
